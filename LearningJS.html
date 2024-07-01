@@ -18,7 +18,9 @@
             }
         }
 
-        document.querySelector('button').onclick = counter;
+        document.addEventListener('DOMContentLoaded',function(){
+            document.querySelector('button').onclick = counter;
+        });
         //this line of code helps in reducing inline js
         //here we are calling the function 'counter' by without parenthesis
         //this is because js supports functional programming where functions
@@ -27,6 +29,7 @@
         //this code won't work because js code ran before the 
         //button is rendered, therefore js won't be able to find the button in DOM
 
+        //so we have added event listener which will wait for page to load
 
     </script>
 </head>
