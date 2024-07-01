@@ -6,16 +6,14 @@
     <title>Document</title>
     <!-- script tag to add message -->
     <script>
-        function hello(message){
-            //function for displaying message
-            alert(message);
+        let count = 0;
+        function counter(){
+            //increases the counter everytime the button is clicked which is then printed
+            alert(++count);
         }
     </script>
 </head>
 <body>
-    <!-- onClick is an event handler that invokes the function "hello()" 
-        on clicking the button 
-    -->
-    <button onClick="hello('hello ayush')">CLICK ME</button>
+    <button onClick="counter()">COUNTER</button></br>
 </body>
 </html>
