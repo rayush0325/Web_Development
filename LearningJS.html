@@ -9,8 +9,14 @@
         function changeElementContent(){
             //querySelector() is the function to get the specified element
             let element = document.querySelector('h1');
-            //below command is used to change the content of the element
-            element.innerHTML = 'GOODBYE';
+            //this code toggles the content of h1 between 'HELLO' and 'GOODBYE'
+            //on clicking button
+            if(element.innerHTML === 'HELLO'){
+                element.innerHTML = 'GOODBYE';
+            }
+            else{
+                element.innerHTML = 'HELLO';
+            }
         }
     </script>
 </head>
