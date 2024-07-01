@@ -6,22 +6,22 @@
     <title>Document</title>
     <!-- script tag to add message -->
     <script>
-        function changeElementContent(){
-            //querySelector() is the function to get the specified element
-            let element = document.querySelector('h1');
-            //this code toggles the content of h1 between 'HELLO' and 'GOODBYE'
-            //on clicking button
-            if(element.innerHTML === 'HELLO'){
-                element.innerHTML = 'GOODBYE';
-            }
-            else{
-                element.innerHTML = 'HELLO';
+        let count = 0;
+        function counter(){
+            let element = document.querySelector('h1');//fetching h1
+            //increasing the value of count and modifying the content of h1 with the new value
+            element.innerHTML = ++count;
+            if(count%10 === 0){
+                //alert(count+' is the multiple of 10');
+                alert(`${count} is multiple of 10`);//template literal
             }
         }
+
+
     </script>
 </head>
 <body>
-    <h1>HELLO</h1>
-    <button onClick="changeElementContent()">CLICK TO CHANGE</button></br>
+    <h1>0</h1>
+    <button onClick="counter()">COUNTER</button></br>
 </body>
 </html>
