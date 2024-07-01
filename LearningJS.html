@@ -6,7 +6,8 @@
     <title>Document</title>
     <!-- script tag to add message -->
     <script>
-        let count = 0;
+        let count = 0;//how the value of count is being retained?
+        //when does the javaScript code re-run?
         function counter(){
             let element = document.querySelector('h1');//fetching h1
             //increasing the value of count and modifying the content of h1 with the new value
@@ -17,11 +18,20 @@
             }
         }
 
+        document.querySelector('button').onclick = counter;
+        //this line of code helps in reducing inline js
+        //here we are calling the function 'counter' by without parenthesis
+        //this is because js supports functional programming where functions
+        //can be treated as values
+        
+        //this code won't work because js code ran before the 
+        //button is rendered, therefore js won't be able to find the button in DOM
+
 
     </script>
 </head>
 <body>
     <h1>0</h1>
-    <button onClick="counter()">COUNTER</button></br>
+    <button>COUNTER</button></br>
 </body>
 </html>
