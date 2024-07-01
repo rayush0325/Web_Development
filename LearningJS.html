@@ -6,14 +6,16 @@
     <title>Document</title>
     <!-- script tag to add message -->
     <script>
-        let count = 0;
-        function counter(){
-            //increases the counter everytime the button is clicked which is then printed
-            alert(++count);
+        function changeElementContent(){
+            //querySelector() is the function to get the specified element
+            let element = document.querySelector('h1');
+            //below command is used to change the content of the element
+            element.innerHTML = 'GOODBYE';
         }
     </script>
 </head>
 <body>
-    <button onClick="counter()">COUNTER</button></br>
+    <h1>HELLO</h1>
+    <button onClick="changeElementContent()">CLICK TO CHANGE</button></br>
 </body>
 </html>
