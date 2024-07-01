@@ -4,34 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- script tag to add message -->
-    <script>
-        let count = 0;//how the value of count is being retained?
-        //when does the javaScript code re-run?
-        function counter(){
-            let element = document.querySelector('h1');//fetching h1
-            //increasing the value of count and modifying the content of h1 with the new value
-            element.innerHTML = ++count;
-            if(count%10 === 0){
-                //alert(count+' is the multiple of 10');
-                alert(`${count} is multiple of 10`);//template literal
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded',function(){
-            document.querySelector('button').onclick = counter;
-        });
-        //this line of code helps in reducing inline js
-        //here we are calling the function 'counter' by without parenthesis
-        //this is because js supports functional programming where functions
-        //can be treated as values
-        
-        //this code won't work because js code ran before the 
-        //button is rendered, therefore js won't be able to find the button in DOM
-
-        //so we have added event listener which will wait for page to load
-
-    </script>
+    <!-- 
+    script tag to add JAVASCRIPT 
+    adding js written in a separate file
+    src attribute specifies the address of js file     
+    -->
+     
+    <script src="LearningJS.js"></script>
 </head>
 <body>
     <h1>0</h1>
